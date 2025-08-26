@@ -20,8 +20,9 @@ namespace appIntegracaoUML.Business
             TimeSpan horasTrabalhadas = saida - entrada;
 
             return horasTrabalhadas > jornadaNormal
-                   ? (horasTrabalhadas - jornadaNormal).Hours
+                   ? (decimal)(horasTrabalhadas - jornadaNormal).TotalHours
                    : 0;
         }
+
     }
 }
